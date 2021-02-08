@@ -44,6 +44,7 @@ export default class DropdownItem extends PureComponent {
         {...props}
         style={[styles.container, style]}
         onPress={this.onPress}
+        testID={'searchItem'}
       >
         {children}
       </TouchableOpacity>

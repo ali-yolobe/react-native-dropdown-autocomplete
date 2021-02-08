@@ -171,12 +171,13 @@ class Autocomplete extends Component {
       placeholderColor,
       data,
       disableFullscreenUI,
+      testID,
       ...dropdownProps
     } = this.props;
 
     return (
       <Fragment>
-        <View style={[styles.inputContainerStyle, inputContainerStyle]}>
+        <View testID={testID} style={[styles.inputContainerStyle, inputContainerStyle]}>
           {renderIcon && renderIcon()}
           <TextInput
             ref={ref => {
@@ -245,7 +246,7 @@ Autocomplete.propTypes = {
   autoCorrect: bool,
   keyboardType: string,
   resetOnSelect: bool,
-
+  testID: string,
   valueExtractor: func,
   renderIcon: func,
   scrollToInput: func,
